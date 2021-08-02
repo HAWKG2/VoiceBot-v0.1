@@ -37,9 +37,12 @@ namespace VoiceBot_v0._1
                 spRec.LoadGrammar(gr);
 
                 //WIP
+                //*
                 //spRec.LoadGrammar(new DictationGrammar());
                 spRec.SpeechRecognized += spRec_SpeechRegonized;
                 spRec.SetInputToDefaultAudioDevice();
+                spRec.RecognizeAsync(RecognizeMode.Multiple);
+
                 spRec.RecognizeAsync(RecognizeMode.Multiple);
             }
             catch
